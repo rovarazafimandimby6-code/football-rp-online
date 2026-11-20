@@ -4,27 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="theme-color" content="#101820">
-  <title>Football RP Online — Prototype P1</title>
+  <title>Football RP Online — Prototype P2</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main id="game-shell">
     <canvas id="game" aria-label="Prototype de football"></canvas>
     <div id="hud">
-      <div class="brand">FOOTBALL RP <span>ONLINE</span></div>
+      <div class="brand">FOOTBALL RP <span>ONLINE</span><small> P2</small></div>
       <div class="score"><span id="blue-score">0</span><small>—</small><span id="red-score">0</span></div>
-      <div class="clock" id="clock">05:00</div>
+      <div class="clock-wrap"><span id="period">1RE PÉRIODE</span><div class="clock" id="clock">02:30</div></div>
     </div>
-    <div id="hint">Prototype P1 · Déplacement, sprint, passe et tir</div>
+    <div id="hint">P2 · Contrôle, passe, tir et défense améliorés</div>
+    <div id="status">Coup d'envoi</div>
+    <div id="stamina"><span>ENDURANCE</span><div><i id="stamina-fill"></i></div></div>
     <div id="controls">
       <div id="stick-zone"><div id="stick-base"><div id="stick-knob"></div></div></div>
       <div id="action-buttons">
         <button id="sprint" class="control secondary">SPRINT</button>
+        <button id="defend" class="control defend">DÉFENSE</button>
         <button id="pass" class="control">PASSE</button>
         <button id="shoot" class="control shoot">TIR</button>
       </div>
     </div>
     <div id="orientation">Tourne ton téléphone en mode paysage pour jouer.</div>
+    <div id="overlay" class="hidden">
+      <div class="overlay-card">
+        <h2 id="overlay-title">Mi-temps</h2>
+        <p id="overlay-text">Reprise dans un instant…</p>
+      </div>
+    </div>
   </main>
   <script src="game.js"></script>
 </body>

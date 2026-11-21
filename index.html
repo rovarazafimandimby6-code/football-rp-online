@@ -2,21 +2,21 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="theme-color" content="#101820">
-  <title>Football RP Online — Prototype P2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0d311f">
+  <title>Football RP Online — P3</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main id="game-shell">
-    <canvas id="game" aria-label="Prototype de football"></canvas>
-    <div id="hud">
-      <div class="brand">FOOTBALL RP <span>ONLINE</span><small> P2</small></div>
-      <div class="score"><span id="blue-score">0</span><small>—</small><span id="red-score">0</span></div>
-      <div class="clock-wrap"><span id="period">1RE PÉRIODE</span><div class="clock" id="clock">02:30</div></div>
+    <canvas id="game" aria-label="Match de football 5 contre 5"></canvas>
+    <div id="board">
+      <div class="team blue"><i></i><b>BLEU</b></div>
+      <div class="sc"><span id="blue-score">0</span><em>–</em><span id="red-score">0</span></div>
+      <div class="team red"><b>ROUGE</b><i></i></div>
+      <div class="time"><small id="period">1RE PÉRIODE</small><strong id="clock">02:30</strong></div>
     </div>
-    <div id="hint">P2 · Contrôle, passe, tir et défense améliorés</div>
-    <div id="status">Coup d'envoi</div>
+    <div id="status"></div>
     <div id="stamina"><span>ENDURANCE</span><div><i id="stamina-fill"></i></div></div>
     <div id="controls">
       <div id="stick-zone"><div id="stick-base"><div id="stick-knob"></div></div></div>
@@ -28,12 +28,7 @@
       </div>
     </div>
     <div id="orientation">Tourne ton téléphone en mode paysage pour jouer.</div>
-    <div id="overlay" class="hidden">
-      <div class="overlay-card">
-        <h2 id="overlay-title">Mi-temps</h2>
-        <p id="overlay-text">Reprise dans un instant…</p>
-      </div>
-    </div>
+    <div id="overlay" class="hidden"><div class="overlay-card"><h2 id="overlay-title">Mi-temps</h2><p id="overlay-text"></p></div></div>
   </main>
   <script src="game.js"></script>
 </body>
